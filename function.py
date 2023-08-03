@@ -2,14 +2,14 @@ import pandas as pd
 from collections import Counter
 import ast
 
-genres = pd.read_csv('genres.csv')
+genres = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\genres.csv')
 genres.genres = genres.genres.apply(ast.literal_eval)
-names = pd.read_csv('Data\\names.csv')
-specs_df = pd.read_csv('Data\\specs.csv')
+names = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\names.csv')
+specs_df = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\specs.csv')
 specs_df.specs = specs_df.specs.apply(ast.literal_eval)
-early_access_df = pd.read_csv('Data\\early_access.csv')
-sentiment_df = pd.read_csv('Data\\sentiment.csv')
-metascore_df = pd.read_csv('Data\\metascore.csv')
+early_access_df = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\early_access.csv')
+sentiment_df = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\sentiment.csv')
+metascore_df = pd.read_csv('C:\Users\brenj\OneDrive\Desktop\PI MLOps - STEAM\Dataset\metascore.csv')
 
 class Games():
 
