@@ -1,15 +1,27 @@
 import pandas as pd
 from collections import Counter
 import ast
+import os
 
-genres = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/genres.csv')
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+genres = pd.read_csv(os.path.join(current_dir, 'Dataset', 'genres.csv'))
 genres.genres = genres.genres.apply(ast.literal_eval)
-names = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/names.csv')
-specs_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/specs.csv')
+names = pd.read_csv(os.path.join(current_dir, 'Dataset', 'names.csv'))
+specs_df = pd.read_csv(os.path.join(current_dir, 'Dataset', 'specs.csv'))
 specs_df.specs = specs_df.specs.apply(ast.literal_eval)
-early_access_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/early_access.csv')
-sentiment_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/sentiment.csv')
-metascore_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/metascore.csv')
+early_access_df = pd.read_csv(os.path.join(current_dir, 'Dataset', 'early_access.csv'))
+sentiment_df = pd.read_csv(os.path.join(current_dir, 'Dataset', 'sentiment.csv'))
+metascore_df = pd.read_csv(os.path.join(current_dir, 'Dataset', 'metascore.csv'))
+# genres = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/genres.csv')
+# genres.genres = genres.genres.apply(ast.literal_eval)
+# names = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/names.csv')
+# specs_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/specs.csv')
+# specs_df.specs = specs_df.specs.apply(ast.literal_eval)
+# early_access_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/early_access.csv')
+# sentiment_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/sentiment.csv')
+# metascore_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/metascore.csv')
 
 class Games():
 
