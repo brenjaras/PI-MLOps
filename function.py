@@ -2,14 +2,14 @@ import pandas as pd
 from collections import Counter
 import ast
 
-genres = pd.read_csv('Dataset\genres.csv')
+genres = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/genres.csv')
 genres.genres = genres.genres.apply(ast.literal_eval)
-names = pd.read_csv('Dataset/names.csv')
-specs_df = pd.read_csv('Dataset\specs.csv')
+names = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/names.csv')
+specs_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/specs.csv')
 specs_df.specs = specs_df.specs.apply(ast.literal_eval)
-early_access_df = pd.read_csv('Dataset\early_access.csv')
-sentiment_df = pd.read_csv('Dataset\sentiment.csv')
-metascore_df = pd.read_csv('Dataset\metascore.csv')
+early_access_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/early_access.csv')
+sentiment_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/sentiment.csv')
+metascore_df = pd.read_csv('https://github.com/brenjaras/PI-MLOps/blob/master/Dataset/metascore.csv')
 
 class Games():
 
