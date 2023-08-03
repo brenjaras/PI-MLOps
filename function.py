@@ -2,7 +2,7 @@ import pandas as pd
 from collections import Counter
 import ast
 
-genres = pd.read_csv('Data\\genres.csv')
+genres = pd.read_csv('genres.csv')
 genres.genres = genres.genres.apply(ast.literal_eval)
 names = pd.read_csv('Data\\names.csv')
 specs_df = pd.read_csv('Data\\specs.csv')
