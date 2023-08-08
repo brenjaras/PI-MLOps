@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from function import Games
+from model import predic
 
 app = FastAPI()
 
@@ -30,3 +31,7 @@ def sentiment(year: int):
 @app.get('/metascore/{year}')
 def metascore(year: int):
     return Games.metascore(year)
+
+@app.get('/prediction/{prediction}')
+def prediction(release_year: int, earlyaccess: bool, genres: list):
+    return predic(release_year, earlyaccess, genres)
